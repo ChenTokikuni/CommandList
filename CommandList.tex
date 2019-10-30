@@ -1,0 +1,33 @@
+git{
+	git archive --output="{project}-$(date '+%Y%m%d_%H%M').zip" HEAD $(git diff --name-only --diff-filter="ACMRT" {commit} HEAD)	//將 {commit} 到 HEAD 改動檔案包成"{project}-$(date '+%Y%m%d_%H%M')"的zip檔
+	git remote set-url {remote_name} {new_url} //重設遠端庫位置
+	git push {remote_name} --tags //上傳tag
+	git fetch --tags //下載tag
+}
+js{
+	typeof({parameter})	//確認資料型態
+	console.log({parameter});	//顯示()內變數	//多參數{1,2,3}
+	console.table([{parameter}])//顯示()內變數(表格形式)	//多參數{1,2,3}
+}
+composer{
+	composer install	//下載composer.lock內檔案
+	composer create-project --prefer-dist laravel/laravel {project_name}	//創建laravel專案
+	composer require --prefer-stable encore/laravel-admin	//下載admin後台
+	
+}
+laravel{
+	php artisan list	//指令表
+	php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"	//發布admin config檔
+	php artisan admin:install 	//安裝 laravel-admin 後台
+	php artisan  schedule:run	//執行排程
+	php artisan cache:clear	//清除cache
+}
+sql{
+	SELECT * FROM {database} GROUP BY {columns} HAVING count(*)>1	//找資料欄位相同值
+	SELECT distinct({columns}) FROM {database}	//搜尋不同值
+	SELECT GROUP_CONCAT({columns}) FROM {database}	//字串合併分類顯示
+	SELECT * FROM {database} into outfile 'd:/{file_name}.txt'	//導出為記事本
+}
+command{
+	grep -r//全文件 --color//加顏色 -nr//全文件，標示行數 "{key_word}"	//搜尋包含{關鍵字}
+}
