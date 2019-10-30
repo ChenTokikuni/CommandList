@@ -13,7 +13,6 @@ composer{
 	composer install	//下載composer.lock內檔案
 	composer create-project --prefer-dist laravel/laravel {project_name}	//創建laravel專案
 	composer require --prefer-stable encore/laravel-admin	//下載admin後台
-	
 }
 laravel{
 	php artisan list	//指令表
@@ -30,4 +29,5 @@ sql{
 }
 command{
 	grep -r//全文件 --color//加顏色 -nr//全文件，標示行數 "{key_word}"	//搜尋包含{關鍵字}
+	ssh {user}@{host_ip}	//ssh連線
 }
