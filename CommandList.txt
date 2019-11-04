@@ -30,4 +30,5 @@ sql{
 command{
 	grep -r//全文件 --color//加顏色 -nr//全文件，標示行數 "{key_word}"	//搜尋包含{關鍵字}
 	ssh {user}@{host_ip}	//ssh連線
+	hwclock {-w}	//顯示硬體時間{校正(要先校正系統時間)}
 }
