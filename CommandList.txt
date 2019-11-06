@@ -3,6 +3,7 @@ git{
 	git remote set-url {remote_name} {new_url} //重設遠端庫位置
 	git push {remote_name} --tags //上傳tag
 	git fetch --tags //下載tag
+	git grep "{key_word}"	//搜尋包含{關鍵字}
 }
 js{
 	typeof({parameter})	//確認資料型態
@@ -25,10 +26,12 @@ sql{
 	SELECT * FROM {database} GROUP BY {columns} HAVING count(*)>1	//找資料欄位相同值
 	SELECT distinct({columns}) FROM {database}	//搜尋不同值
 	SELECT GROUP_CONCAT({columns}) FROM {database}	//字串合併分類顯示
-	SELECT * FROM {database} into outfile 'd:/{file_name}.txt'	//導出為記事本
+	SELECT * FROM {database} into outfile '{file_path}/{file_name}.txt'	//導出為記事本
 }
 command{
-	grep -r//全文件 --color//加顏色 -nr//全文件，標示行數 "{key_word}"	//搜尋包含{關鍵字}
+	grep "{key_word}"	{--color}	{-r}	{-n}	{-i}	//搜尋包含{關鍵字}	{加顏色}	{全文件}	{標示行數}	{不區分大小寫}
+	cat {file_name}	//印出檔案內容
+	find . -name {file_name}	//搜尋檔案
 	ssh {user}@{host_ip}	//ssh連線
-	hwclock {-w}	//顯示硬體時間{校正(要先校正系統時間)}
+	hwclock {-w}	{--hctosys}	{-r read}	//顯示硬體時間	{校正(系統時間寫入硬體時間)}	{校正(硬體時間寫入系統時間)}	{讀取 BIOS 時間}
 }
