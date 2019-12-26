@@ -28,6 +28,9 @@ sql{
 	SELECT GROUP_CONCAT({columns}) FROM {database}	//字串合併分類顯示
 	SELECT * FROM {database} into outfile '{file_path}/{file_name}.txt'	//導出為記事本
 }
+python{
+	exec(open("{file_path}").read())	//在python shell 上執行模型
+}
 command{
 	grep "{key_word}"	{--color}	{-r}	{-n}	{-i}	//搜尋包含{關鍵字}	{加顏色}	{全文件}	{標示行數}	{不區分大小寫}
 	cat {file_name}	//印出檔案內容
