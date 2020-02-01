@@ -21,6 +21,7 @@ laravel{
 	php artisan admin:install 	//安裝 laravel-admin 後台
 	php artisan  schedule:run	//執行排程
 	php artisan cache:clear	//清除cache
+	php artisan key:generate	//生成laravel app key
 }
 sql{
 	SELECT * FROM {database} GROUP BY {columns} HAVING count(*)>1	//找資料欄位相同值
@@ -28,6 +29,7 @@ sql{
 	SELECT GROUP_CONCAT({columns}) FROM {database}	//字串合併分類顯示
 	SELECT * FROM {database} into outfile '{file_path}/{file_name}.txt'	//導出為記事本
 	SELECT SUBSTRING_INDEX({columns},{value},{length})	//分割欄位中的值(以{value}為界線)
+	SELECT Length({columns}) FROM {database} //搜尋欄位字串長度
 }
 python{
 	exec(open("{file_path}").read())	//在python shell 上執行模型
