@@ -30,6 +30,7 @@ sql{
 	SELECT * FROM {database} into outfile '{file_path}/{file_name}.txt'	//導出為記事本
 	SELECT SUBSTRING_INDEX({columns},{value},{length})	//分割欄位中的值(以{value}為界線)
 	SELECT Length({columns}) FROM {database} //搜尋欄位字串長度
+	SELECT DATE_FORMAT({columns},{format}) FROM {database} //轉換欄位日期格式 ex:{format}='%Y-%m-%d'
 }
 python{
 	exec(open("{file_path}").read())	//在python shell 上執行模型
