@@ -31,6 +31,8 @@ sql{
 	SELECT SUBSTRING_INDEX({columns},{value},{length})	//分割欄位中的值(以{value}為界線)
 	SELECT Length({columns}) FROM {database} //搜尋欄位字串長度
 	SELECT DATE_FORMAT({columns},{format}) FROM {database} //轉換欄位日期格式 ex:{format}='%Y-%m-%d'
+	SELECT GREATEST ({columns},{columns}) FROM {database} //搜尋兩欄位最大值
+	SELECT LEAST ({columns},{columns}) FROM {database} //搜尋兩欄位最小值
 }
 python{
 	exec(open("{file_path}").read())	//在python shell 上執行模型
@@ -41,4 +43,7 @@ command{
 	find . -name {file_name}	//搜尋檔案
 	ssh {user}@{host_ip}	//ssh連線
 	hwclock {-w}	{--hctosys}	{-r read}	//顯示硬體時間	{校正(系統時間寫入硬體時間)}	{校正(硬體時間寫入系統時間)}	{讀取 BIOS 時間}
+}
+gcp{
+	sudo -i	//切換root用戶
 }
