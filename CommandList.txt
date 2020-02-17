@@ -33,6 +33,7 @@ sql{
 	SELECT DATE_FORMAT({columns},{format}) FROM {database} //轉換欄位日期格式 ex:{format}='%Y-%m-%d'
 	SELECT GREATEST ({columns},{columns}) FROM {database} //搜尋兩欄位最大值
 	SELECT LEAST ({columns},{columns}) FROM {database} //搜尋兩欄位最小值
+	{sql1} UNION {sql2}	//sql語法連結
 }
 python{
 	exec(open("{file_path}").read())	//在python shell 上執行模型
