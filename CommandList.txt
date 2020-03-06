@@ -4,6 +4,8 @@ git{
 	git push {remote_name} --tags //上傳tag
 	git fetch --tags //下載tag
 	git grep "{key_word}"	//搜尋包含{關鍵字}
+	git config [--global] user.name "{Full Name}"	//重設usernae設定檔
+	git config [--global] user.email "{email@address.com}"	////重設email設定檔
 }
 js{
 	typeof({parameter})	//確認資料型態
