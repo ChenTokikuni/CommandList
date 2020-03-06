@@ -6,6 +6,7 @@ git{
 	git grep "{key_word}"	//搜尋包含{關鍵字}
 	git config [--global] user.name "{Full Name}"	//重設usernae設定檔
 	git config [--global] user.email "{email@address.com}"	////重設email設定檔
+	git clone https://{username}:{password}@github.com/{NAME}/{repo.git}	//以xxx帳號克隆檔案
 }
 js{
 	typeof({parameter})	//確認資料型態
