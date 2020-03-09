@@ -42,11 +42,11 @@ python{
 	exec(open("{file_path}").read())	//在python shell 上執行模型
 }
 command{
-	grep "{key_word}"	{--color}	{-r}	{-n}	{-i}	//搜尋包含{關鍵字}	{加顏色}	{全文件}	{標示行數}	{不區分大小寫}
+	grep "{key_word}"	[--color]	[-r]	[-n]	[-i]	//搜尋包含[關鍵字]	[加顏色]	[全文件]	[標示行數]	[不區分大小寫]
 	cat {file_name}	//印出檔案內容
 	find . -name {file_name}	//搜尋檔案
 	ssh {user}@{host_ip}	//ssh連線
-	hwclock {-w}	{--hctosys}	{-r read}	//顯示硬體時間	{校正(系統時間寫入硬體時間)}	{校正(硬體時間寫入系統時間)}	{讀取 BIOS 時間}
+	hwclock [-w]	[--hctosys]	[-r read]	//顯示硬體時間	[校正(系統時間寫入硬體時間)]	[校正(硬體時間寫入系統時間)]	[讀取 BIOS 時間]
 }
 gcp{
 	sudo -i	//切換root用戶
